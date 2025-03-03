@@ -80,3 +80,8 @@ def statistics_view(request):
     graphic2 = base64.b64encode(image_png2).decode('utf-8')
 
     return render(request, 'statistics.html', {'graphic1': graphic1, 'graphic2': graphic2})
+
+
+def signup(request):
+    email= request.GET.get('email')
+    return render(request, 'signup.html',{'email':email})
